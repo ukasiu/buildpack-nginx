@@ -15,5 +15,9 @@ http {
     server_name  _;
     root /app/www/dist;
     index index.html;
+    
+    location / {
+        try_files $uri /index.html;
+    }
   }
 }
